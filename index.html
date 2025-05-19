@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Manager with Due Dates, Priority, Edit & Sort</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="taskManager">
+    <header class="card">
+      <h1>Task Manager ✅</h1>
+      <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Add a task..." required />
+        <input type="datetime-local" id="dueDateInput" title="Due Date & Time" />
+        <select id="priorityInput" title="Priority">
+          <option value="Low" selected>Low Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="High">High Priority</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+      <div class="sortContainer">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="default">Default</option>
+          <option value="priority">Priority (High → Low)</option>
+          <option value="dueDate">Due Date (Earliest first)</option>
+        </select>
+      </div>
+    </header>
+
+    <section id="taskContainer"></section>
+  </section>
+
+  <div class="confirm">
+    <h1>Confirm your action</h1>
+    <p>Are you <strong>really</strong> sure that you want to delete this task?</p>
+    <button class="cancel">Cancel</button>
+    <button autofocus class="confirmed">Confirm</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
